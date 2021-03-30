@@ -4,7 +4,8 @@ s = list(input())
 print(s)
 result = int(s[0])
 for i in range(1,len(s)):
-    if result<2 or int(i)<2:
+    if result<2 or int(s[i])<2:
+    #if result < 2:
         result+=int(s[i])
     else:
         result*=int(s[i])
@@ -13,6 +14,8 @@ for i in range(1,len(s)):
     # 아니라면
         # *
 print(result)
+
+
 
 #다만 두수 중에서 하나라도 '0' 혹은 '1'인 경우 곱하기 보다
 # 더하기를 수행하는 것이 더 효율적이다.

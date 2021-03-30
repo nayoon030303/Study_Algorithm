@@ -1,35 +1,31 @@
 import  time
 
+# 큰 단위의 화폐부터 차례대로 확인학.
+money = int(input())
+array = [500, 100, 50, 10]
+cnt = 0
+for i in array:
+    cnt += money // i  # 해당 화페로 거슬러 줄 수 있는 동전의 개수 세기
+    money %= i
 
-#문제: 거스름 돈
-def solution1(money):
-
-    #큰 단위의 화폐부터 차례대로 확인학.
-    array = [500,100,50,10]
-    cnt = 0
-    for i in array:
-        cnt += money // i   # 해당 화페로 거슬러 줄 수 있는 동전의 개수 세기
-        money%=i
-    return cnt
-
-#print(solution1(1260))
+print(cnt)
 
 #문제: 1이 될 때까지
-def solution2_1(n,k):
-    count = 0
-    while(n!=1):
-        if n%k == 0:
-            n//=k
-        else:
-            n-=1
-        count+=1
-    return  count
 
-start = time .time()
+
+
+
 n,k = map(int,input().split())
-print(solution2_1(n,k))
-end = time.time()
-print(end-start)
+count = 0
+while(n!=1):
+    if n%k == 0:
+        n//=k
+    else:
+        n-=1
+    count+=1
+
+print(count)
+
 
 
 #문제: 1이 될 때까지
