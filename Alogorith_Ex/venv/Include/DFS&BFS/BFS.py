@@ -4,6 +4,7 @@ from collections import deque
 def bfs(graph,start,visited):
     #큐(Queue) 구현을 위해 deque 라이브러리 사용
     queue = deque([start])
+    print(queue)
     #현재 노드를 방문처리
     visited[start] = True
     #큐가 빌 떄까지 반복
