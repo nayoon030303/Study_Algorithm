@@ -48,12 +48,6 @@ def dfs(x,y):
 
 n,m = map(int,input().split())
 graph = list((list(input()) for _ in range(n)))
-#print(graph)
-#graph =[]
-#for i in range(n):
- #   graph.append(list(map(int,input())))
-#print(graph)
-#visited  = [False]*n*m
 
 #모든 노드(위치)에 대하여 음료수 채우기
 result = 0
