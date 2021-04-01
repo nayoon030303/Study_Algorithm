@@ -19,18 +19,24 @@ def bfs(graph, v, visited):
         for j in graph[i]:
             if not visited[j]:
                 visited[j] = True
+                mi = 1000
                 queue.append(j)
+
 
 
 n, m, v = map(int, input().split())
 li = []
-graph = [[] * (n + 1)]
+graph = [[] for _ in range(n + 1)]
 visited = [False] * (n + 1)
 for i in range(m):
     li.append(list(map(int, input().split())))
+
 for i in range(m):
     graph[li[i][0]].append(li[i][1])
     graph[li[i][1]].append(li[i][0])
+for i in graph:
+    i.sort()
+
 
 dfs(graph, v, visited)
 visited = [False] * (n + 1)
