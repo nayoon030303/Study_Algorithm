@@ -1,30 +1,28 @@
-from collections import deque
+from queue import PriorityQueue
 
 
-def q_solution():
-    pass
 
 
 n, k = map(int, input().split())
-j_queue = deque()
-kg_queue = deque()
+j_queue = PriorityQueue()
+kg_queue = PriorityQueue()
 kge_list = ['empty'] * k
 result = 0
 
 for i in range(n):
     # 가격이 높은 순으로
     a,b = map(int, input().split())
-    j_queue.append(tuple((b,a)))
+    j_queue.put(tuple((b*-1,a)))
 
 for i in range(k):
-    kg_queue.append(int(input()))
+    kg_queue.put(int(input())*-1)
 
 
 
 #j_queue = sorted(j_queue, key=lambda x: -x[1])
 #j_queue.sort(reverse=True)
-print(j_queue)
-print(kg_queue)
+#print(j_queue.get())
+#print(kg_queue)
 #print(kg_list)
 #for h in range(len(jewelry_list)):
 #    for k in range(len(kg_list)):
@@ -35,17 +33,51 @@ print(kg_queue)
 #           kge_list[k] = 'full'
 #           break;
 
+#보석의 가격이 높은것 부터 순서대로
+#가방의 크기가 가장 큰것부터
+
+
 #    if kge_list[k-1] == 'full':
 #        break
 
-while kg_queue:
-    j_price = j_queue.popleft()
-    if kg_queue[0] >= j_price[i]:
-        kg_queue.popleft()
-        result+=j_price[1]
+
+#print(kg_queue.qsize())
+count = 0
+while True:
+    a = j_queue.get()
+    j_price = a[0]*-1
+    j_kg = a[1]
+    b = kg_queue.get()*-1
+   # print("pop")
+    if b >= j_kg:
+        #print("사용")
+        result+=j_price
+
+    if kg_queue.qsize() == 0:
+        #print("ㅁㅁㅁ")
+        print(result)
+        break
+
+    if b <= j_kg :
+        #print("추가")
+        result += j_price
+    #print(kg_queue.qsize())
 
 
-print(result)
+
+
+
+   # print(price,kg)
+
+
+#while kg_queue:
+#    j_price = j_queue.popleft()
+#    if kg_queue[0] >= j_price[i]:
+#        kg_queue.popleft()
+#        result+=j_price[1]
+
+
+
 
 
 
