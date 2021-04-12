@@ -5,6 +5,10 @@ function solution(s) {
     {
         for(var i=0; i<s.length; i++)
         {
+            /*
+            isNaN: is Not a Number
+            숫자가 아니라면 true
+            */
             if(isNaN(s[i]))
             {
                 console.log(s[i]);
