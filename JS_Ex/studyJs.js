@@ -1,5 +1,3 @@
-const array1 =  [5, 12, 8, 130, 44];
-
-const found = array1.find((element,index) => index >1);
-
-console.log(found);
+const arr = [5, 6, 9, 1, 6, 3, 2, 1, 2, 7, 9, 4, 3];
+var r = arr.findIndex((element,index)=>element>7);
+console.log(r);
