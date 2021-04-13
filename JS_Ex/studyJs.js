@@ -1,3 +1,5 @@
-const array = [1,2,3,4,5,2];
-var n = array.indexOf(2,2);
-console.log(n);
+const array1 =  [5, 12, 8, 130, 44];
+
+const found = array1.find((element,index) => index >1);
+
+console.log(found);
