@@ -1,6 +1,32 @@
+function caesar(s, n) {
+    var result = "";
+    // 함수를 완성하세요.
+  var car = ""
+
+  for (var i=0; i<s.length;i++)
+  {        
+    if ( s[i] == ' ' )
+      result += ' '
+    else 
+        result += String.fromCharCode( (s.charCodeAt(i)>90)?
+      (s.charCodeAt(i)+n-97)%26+97 : (s.charCodeAt(i)+n-65)%26+65 )     
+  }
+
+    return result;
+}
+
+
+
+
+
+
+
+/*
+my code
+*/
 function solution(s, n) {
     var answer = '';
-    
+    answer = [];
     for(var i=0; i<s.length; i++){
         var currnet = s.charCodeAt(i);
         var next = s.charCodeAt(i)+n;
