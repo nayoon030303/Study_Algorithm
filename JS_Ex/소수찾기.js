@@ -25,6 +25,7 @@ console.log(solution(n));
 
 /*
 my code
+에라토스테네스의 체 사용
 */
 function solution1(n) {
     var answer = 0;
