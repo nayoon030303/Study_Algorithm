@@ -7,6 +7,8 @@ function solution(N, stages) {
     }
     var an = answer.map((content,index)=>index+1);
     an.length = N;
+
+    //선택 정렬을 하면서 an의 값도 같이 바뀌준다.
     for(var i=0; i<N-1; i++){
         for(var j=i; j<N; j++){
             if(answer[i]<=answer[j]){
