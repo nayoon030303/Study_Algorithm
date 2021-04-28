@@ -1,5 +1,5 @@
 function solution(number, k) {
-   const stack = [];
+   const stack = []; //글자들이 저장될 스택
    let answer = '';
 
    for(let i=0; i<number.length; i++){
