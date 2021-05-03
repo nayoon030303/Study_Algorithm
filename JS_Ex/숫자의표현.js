@@ -22,3 +22,18 @@ function solution(n) {
     } 
     return answer;
 }
+
+ /**
+  * otehr code
+  */
+
+function expressions(num) {
+    var answer = 0;
+
+    for(var i=1; i<=num; i++) {
+        if(num%i == 0 && i%2 == 1) //홀수인 약수의 갯수를 구한다.
+         answer++
+    }
+
+    return answer;
+}

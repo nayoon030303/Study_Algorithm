@@ -31,6 +31,8 @@ function solution(priorities, location) {
 
 /*
 other code
+
+
 */
 function solution(priorities, location) {
     var answer = 0;

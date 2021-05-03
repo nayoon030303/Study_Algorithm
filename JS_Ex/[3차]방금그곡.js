@@ -120,7 +120,7 @@ function solution(m, musicinfos) {
         var max=answer[0][1];
         var an = answer[0][0];
         for(var i=1; i<answer.length; i++){
-            if(max<answer[i][1]){
+            if(max<answer[i][1]){ //answer[i][1]이 map보다 커야지 변경된다. 
                 max = answer[i][1];
                 an = answer[i][0];
             }

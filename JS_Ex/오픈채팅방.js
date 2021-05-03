@@ -38,21 +38,29 @@ function solution(record) {
 
 /**
  * 고친 코드
+ * 내장 함수를 최소한으로 사용
  */
+
 
  function solution(record) {
     
     var answer = [];
-
-    
-    //id->닉네임으로 치환
+    var nameDict = {}; //객체 생성
     for(var i=0; i<record.length; i++){
-       if(record[i][0]==='E'){     
-           answer.push(record[i].split(' ')[1]+'님이 들어왔습니다.');
+        if(record[i][0]!=='L'){//Left가 아니라면
+            var temp = record[i].split(' ');
+            nameDict[temp[1]] = temp[2]; //id로 된 객체에 닉네임을 집어넣는다. 
+        }
+    }
+     
+    for(var i=0; i<record.length; i++){
+        var name = record[i].split(' ')[1];
+       if(record[i][0]==='E'){  
+           answer.push(nameDict[name]+'님이 들어왔습니다.');
        }else if(record[i][0]==='L'){
-            answer.push(record[i].split(' ')[1]+'님이 들어왔습니다.');
+           answer.push(nameDict[name]+'님이 나갔습니다.');
        }
     }
-    
+    console.log(answer);
     return answer;
 }
