@@ -19,7 +19,10 @@ function solution(skill, skill_trees) {
    
     return answer;
 }
-
+/**
+ * 코드가 간결하나 
+ * 내 코드보다 속도는 조금 느리다
+ */
 function solution1(skill, skill_trees) {
     var answer = 0;
     //정규식에 문자열 변수 넣기 객체를 생성해서

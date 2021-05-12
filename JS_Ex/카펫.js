@@ -1,6 +1,7 @@
 /**
  * my code 
  * h+2 * w+2 가 brown+yellow인것
+ * yellow를 가지고 계산
  */
 function solution(brown, yellow) {
     if(yellow===1)return[3,3];
@@ -19,6 +20,8 @@ function solution(brown, yellow) {
 
 /**
  * 코드 고치기
+ * 시간효울더 좋음 0.n
+ * brown을 가지고 계산
  */
 function solution(brown, yello){
     let answer = [];

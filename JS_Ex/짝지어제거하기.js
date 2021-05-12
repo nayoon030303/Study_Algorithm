@@ -6,28 +6,15 @@
 
 function solution(s)
 {
-   
-    while(true){
-        //2개 붙어 있는 짝을 찾기
-        var temp = [];
-        var check = s.length;
-        for(let i =0; i<s.length; i++){
-            if(s[i]===s[i+1]){
-                i+=1;
-                continue;
-            }
-            temp.push(s[i]);
-            
+    s = s.split("");
+    for(let i = 0 ; i < strArr.length-1 ; i++){
+      if(strArr[i] === strArr[i+1]){
+           strArr.splice( i, 2 );
+            i = -1;
         }
-        s = temp;
-        if(check===s.length){
-            break;
-        }
-        //console.log(temp);
     }
     
-    if(s.length===0)return 1;
-    else return 0;
+    return strArr.length === 0 ? 1 : 0;
     
 }
 
@@ -46,7 +33,7 @@ function solution(s)
             stack.pop();
         }
     }
-    //console.log(stack)
+    
     if(!stack.length)return 1;
     else return 0;
    

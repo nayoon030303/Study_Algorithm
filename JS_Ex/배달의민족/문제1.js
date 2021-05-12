@@ -1,6 +1,7 @@
 function solution(weights,head2head){
     var answer = [];
     var person = [];
+    
     for(var i=0; i<head2head.length; i++){
         person[i] = {idx:i+1, odd:0, heavy:0 ,weight:weights[i]};
         for(var j=0; j<head2head[i].length; j++){
