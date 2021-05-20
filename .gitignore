@@ -62,3 +62,9 @@ Alogorith_Ex/venv/Lib/site-packages/pip-21.0.1.dist-info/
 *.pem
 
 Alogorith_Ex/venv/Lib/site-packages/pip/_vendor/vendor.txt
+
+*.db-shm
+
+backjune/Algorithm/.vs/Algorithm/v16/
+
+*.log
