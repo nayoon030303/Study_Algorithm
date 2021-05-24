@@ -22,12 +22,12 @@ int main()
 	
 
 	string temp = "";
-	int m = 0;
+	int minus = 0;
 	int num = 0;
 
 	for (int i = 0; i <= str.length(); i++) {
 		if (str[i] == '-' || str[i] =='+' || str[i]=='\0') {
-			if (m) { //1이라면 -
+			if (minus) { //1이라면 -
 				num -= stoi(temp);			
 			}
 			else {
@@ -35,7 +35,7 @@ int main()
 			}
 
 			if (str[i] == '-') {//-가 나온직후는 모두 -하기
-				m = 1;
+				minus = 1;
 			}
 			temp = "";
 			continue;
